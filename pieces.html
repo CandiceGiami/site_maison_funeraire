@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./images/logo.jpg" />
+    <title>Maison Funéraire</title>
+    <style>
+      /* Ajout de styles CSS personnalisés */
+
+      /* Disposition des images avec flexbox */
+      .titles {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px;
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.7
+        ); /* Fond pour améliorer la lisibilité */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin-bottom: 20px;
+      }
+
+      .titles p {
+        width: 100%;
+        text-align: left; /* Alignement du texte à gauche */
+        font-family: "Arial", sans-serif; /* Police lisible */
+        color: #333; /* Couleur du texte */
+        padding: 10px;
+      }
+
+      .titles .centered-images {
+        text-align: center; /* Alignement des images au centre */
+      }
+
+      .titles img {
+        width: 200px;
+        height: auto;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .titles img:hover {
+        transform: scale(1.05);
+      }
+
+      /* Style du titre */
+      .title {
+        font-family: "Arial", sans-serif; /* Police lisible */
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 10px;
+        color: #333; /* Couleur du texte */
+        border-top: 2px solid #333; /* Ligne au-dessus du titre */
+        padding-top: 20px; /* Espacement entre la ligne et le titre */
+      }
+
+      /* Répétition du fond de page */
+      body {
+        background: linear-gradient(
+            rgba(202, 230, 240, 0.7),
+            rgba(202, 230, 240, 0.7)
+          ),
+          url(./images/fond.jpg) repeat-y;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="./index.html" title="Accueil">
+        <img
+          alt="Accueil"
+          src="./images/logo.jpg"
+          width="150"
+          height="150"
+          style="margin-left: 20px; border-radius: 50px; margin-top: 3px"
+        />
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <a href="./services.html"> Notre Histoire </a>
+          </li>
+          <li>
+            <a href="./pieces.html"> Nos Services </a>
+          </li>
+
+          <li>
+            <a href="./documents.html"> Documents </a>
+          </li>
+          <li>
+            <a href="./horaires.html"> Horaires </a>
+          </li>
+          <li><a href="./contact.html"> Contact </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="titles">
+      <h1 class="black-title">La Maison Funéraire</h1>
+      <div>
+        <p>
+          Nos installations sont conçues pour offrir confort et soutien à vous
+          et à vos proches dans ces moments difficiles.
+        </p>
+      </div>
+      <div class="title">Salons Funéraires</div>
+      <p class="centered-images">
+        Nous mettons à votre disposition deux salons, le Salon Ivoire et le
+        Salon Azur. Ces espaces sont aménagés pour vous offrir un cadre paisible
+        et respectueux, où vous pourrez vous recueillir en toute intimité.
+      </p>
+      <p class="centered-images">
+        <img src="./images/sf_azur_close.jpg" alt="Salon Azur" />
+        <img src="./images/sf_azur.jpg" alt="Salon Azur" />
+        <img src="./images/sf_azur_open.jpg" alt="Salon Azur" />
+        <img src="./images/sf_ivoire.jpg" alt="Salon Ivoire" />
+      </p>
+
+      <div>
+        <div class="title">Salle de Cérémonie</div>
+        <p class="centered-images">
+          Notre salle de cérémonie est entièrement équipée pour vos
+          recueillements et peut accueillir jusqu'à environ 50 personnes. Avec
+          une ambiance apaisante et une attention portée aux détails, cet espace
+          est conçu pour honorer la mémoire de vos êtres chers.
+        </p>
+        <p class="centered-images">
+          <img src="./images/ceremonie_2.jpg" alt="Salle de Cérémonie" />
+          <img src="./images/ceremonie_3.jpg" alt="Salle de Cérémonie" />
+          <img src="./images/ceremonie.jpg" alt="Salle de Cérémonie" />
+        </p>
+      </div>
+
+      <div>
+        <div class="title">Hall d'Entrée</div>
+        <p class="centered-images">
+          Notre hall d'entrée vous accueille dans une atmosphère chaleureuse.
+          C'est un lieu de rencontre où vous pourrez vous retrouver avec vos
+          proches, partager des souvenirs et prendre un moment de réconfort
+          autour d'un café ou d'un chocolat.
+        </p>
+        <p class="centered-images">
+          <img src="./images/commun_3.jpg" alt="Hall d'Entrée" />
+          <img src="./images/commun_1.jpg" alt="Hall d'Entrée" />
+          <img src="./images/commun_4.jpg" alt="Hall d'Entrée" />
+        </p>
+      </div>
+
+      <div>
+        <div class="title">Parking</div>
+        <p class="centered-images">
+          Notre parking, avec ses six places dont une réservée aux personnes à
+          mobilité réduite (PMR), vous offre la tranquillité d'esprit lors de
+          votre visite.
+        </p>
+        <p class="centered-images">
+          <img src="./images/Parking.jpg" alt="Parking" />
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <p style="text-align: right; color: black; margin: 20px">
+        &copy; 2024 Maison Funéraire Budniewski Tomczyk
+      </p>
+    </footer>
+  </body>
+</html>

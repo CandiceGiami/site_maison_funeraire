@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./images/logo.jpg" />
+    <title>Maison Funéraire</title>
+    <style>
+      /* Ajout de styles CSS personnalisés */
+
+      /* Disposition des images avec flexbox */
+      .titles {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.7); /* Fond pour améliorer la lisibilité */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin-bottom: 20px;
+      }
+
+      .titles p {
+        width: 100%;
+        text-align: justify; /* Justification du texte */
+        font-family: "Arial", sans-serif; /* Police lisible */
+        color: #333; /* Couleur du texte */
+        padding: 10px;
+        margin-bottom: 20px; /* Espacement entre les paragraphes */
+      }
+
+      /* Style du carrousel */
+      .carousel img {
+        width: 100%; /* Les images prennent toute la largeur du conteneur */
+        height: auto; /* Conserve les proportions */
+        object-fit: contain; /* Empêche les images d'être coupées, les ajuste dans le conteneur */
+        display: none; /* Cache toutes les images sauf celle active */
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      .carousel img.active {
+        display: inline-block; /* Affiche uniquement l'image active */
+      }
+
+      @media (max-width: 768px) {
+        .carousel {
+          max-height: 200px; /* Diminue la hauteur du carrousel pour petits écrans */
+        }
+
+        .carousel img {
+          object-fit: cover; /* Sur petit écran, ajustement pour occuper tout l'espace */
+        }
+      }
+
+
+
+      /* Dots (points de navigation) */
+      .dots {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .dots .dot {
+        height: 12px;
+        width: 12px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        cursor: pointer;
+      }
+
+      .dots .dot.active {
+        background-color: #717171;
+      }
+
+      /* Style du titre */
+      .title {
+        font-family: "Arial", sans-serif; /* Police lisible */
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 10px;
+        color: #333; /* Couleur du texte */
+        border-top: 2px solid #333; /* Ligne au-dessus du titre */
+        padding-top: 20px; /* Espacement entre la ligne et le titre */
+      }
+
+      /* Répétition du fond de page */
+      body {
+        background: linear-gradient(
+          rgba(202, 230, 240, 0.7),rgba(202, 230, 240, 0.7)
+          ),
+          url(./images/fond.jpg) repeat-y;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="./index.html" title="Accueil">
+        <img
+          alt="Accueil"
+          src="./images/logo.jpg"
+          width="150"
+          height="150"
+          style="margin-left: 20px; border-radius: 50px; margin-top: 3px"
+        />
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <a href="./services.html"> Notre Histoire </a>
+          </li>
+          <li>
+            <a href="./pieces.html"> Nos Services </a>
+          </li>
+          <li>
+            <a href="./documents.html"> Documents </a>
+          </li>
+          <li>
+            <a href="./horaires.html"> Horaires </a>
+          </li>
+          <li><a href="./contact.html"> Contact </a></li>
+        </ul>
+      </nav>
+    </header>
+  </br></br>
+    <section class="titles">
+      <h1 class="black-title">Notre Histoire</h1>
+      <p>
+        Laetitia et Christophe Budniewski ont créé en 2012 la société Transport Funéraire Budniewski Tomczyk, qui s'est depuis bien implantée et compte aujourd'hui 7 salariés.</br></br></br>
+
+        Cette société travaille avec toutes les pompes funèbres de la région en mettant à leur disposition son personnel expérimenté et ses 6 corbillards pour effectuer leurs cérémonies ou transports toutes distances en France ou à l'étranger.</br></br>
+
+        Désireux de se développer, mais surtout face à l’absence de salon funéraire sur Loison-sous-Lens et à la demande de plus en plus pressante des habitants de notre ville, Laetitia et Christophe se sont lancés dans un nouveau projet : ouvrir une maison funéraire sur Loison-sous-Lens.</br></br>
+
+        Avec le soutien de la mairie et des professionnels qui ont suivi et réalisé cette belle construction, aujourd'hui Laetitia et Christophe sont fiers de vous annoncer l'ouverture de la Maison Funéraire Budniewski.</br></br></br>
+        Bien que nous ne soyons pas une entreprise de pompes funèbres, nous pouvons, dès la connaissance du décès, organiser le transport du lieu de décès jusqu'à notre salon funéraire de Loison-sous-Lens. </br></br>Cela vous laissera ainsi le temps nécessaire pour organiser les obsèques selon vos souhaits auprès des pompes funèbres de votre choix.
+      </p>
+    </br></br>
+      <div class="carousel">
+          <img class="d-block w-100 active" src="./images/diapo1.jpg" alt="Image 1">
+          <img class="d-block w-100" src="./images/diapo2.jpg" alt="Image 2">
+          <img class="d-block w-100" src="./images/diapo3.jpg" alt="Image 3">
+          <img class="d-block w-100" src="./images/diapo4.jpg" alt="Image 4">
+          <img class="d-block w-100" src="./images/diapo5.jpg" alt="Image 5">
+          <img class="d-block w-100" src="./images/diapo6.jpg" alt="Image 6">
+      </div>
+    
+      <div class="dots">
+        <span class="dot active" onclick="showSlide(0)"></span>
+        <span class="dot" onclick="showSlide(1)"></span>
+        <span class="dot" onclick="showSlide(2)"></span>
+        <span class="dot" onclick="showSlide(3)"></span>
+        <span class="dot" onclick="showSlide(4)"></span>
+        <span class="dot" onclick="showSlide(5)"></span>
+      </div>
+    </section>
+
+    <footer>
+      <p style="text-align: right; color: black; margin: 20px">
+        &copy; 2024 Maison Funéraire Budniewski Tomczyk
+      </p>
+    </footer>
+
+    <script>
+      let currentSlide = 0;
+let autoSlideInterval;
+
+// Fonction pour afficher une image spécifique
+function showSlide(index) {
+  const slides = document.querySelectorAll('.carousel img');
+  const dots = document.querySelectorAll('.dot');
+
+  // Cache toutes les images
+  slides.forEach(slide => slide.classList.remove('active'));
+  
+  // Désactive tous les dots
+  dots.forEach(dot => dot.classList.remove('active'));
+
+  // Affiche l'image sélectionnée
+  slides[index].classList.add('active');
+  
+  // Active le dot correspondant
+  dots[index].classList.add('active');
+
+  currentSlide = index;
+}
+
+// Fonction pour passer à la diapositive suivante automatiquement
+function nextSlide() {
+  const slides = document.querySelectorAll('.carousel img');
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Démarrer le défilement automatique
+function startAutoSlide() {
+  autoSlideInterval = setInterval(nextSlide, 3000); // Change d'image toutes les 3 secondes
+}
+
+// Arrêter le défilement automatique
+function stopAutoSlide() {
+  clearInterval(autoSlideInterval);
+}
+
+// Initialisation
+document.addEventListener('DOMContentLoaded', function () {
+  startAutoSlide(); // Démarre le défilement automatique à l'ouverture de la page
+
+  // Arrêter le défilement automatique lors du survol du carrousel
+  const carousel = document.querySelector('.carousel');
+  carousel.addEventListener('mouseenter', stopAutoSlide);
+  carousel.addEventListener('mouseleave', startAutoSlide);
+
+  // Arrêter le défilement automatique lors du clic sur un dot
+  const dots = document.querySelectorAll('.dot');
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', function() {
+      showSlide(index);
+      stopAutoSlide(); // Facultatif : arrêter le défilement automatique après un clic
+      startAutoSlide(); // Redémarrer après un certain temps
+    });
+  });
+});
+
+    </script>
+  </body>
+</html>

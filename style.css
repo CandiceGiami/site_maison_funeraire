@@ -1,0 +1,460 @@
+/* Réinitialise les boîtes pour inclure les bordures et le remplissage dans les dimensions */
+* {
+  box-sizing: border-box;
+}
+
+/* Réinitialise les marges et les rembourrages du document */
+html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style du corps de la page */
+body {
+  margin: 0;
+  padding: 0;
+  /* Dégradé de fond et image de fond */
+  /*background: linear-gradient(rgba(92, 159, 185, 0.7), rgba(92, 159, 185, 0.7)), url(./images/fond.jpg) no-repeat;*/
+  background: linear-gradient(rgba(202, 230, 240, 0.7), rgba(202, 230, 240, 0.7)), url(./images/fond.jpg) no-repeat;
+  background-size: cover;
+  color: black;
+  font-family: "open sans";
+  height: 100vh; /* Hauteur égale à la hauteur de la fenêtre du navigateur */
+  display: flex;
+  flex-direction: column; /* Affichage en colonnes */
+  justify-content: space-between; /* Espace égal entre les éléments */
+}
+
+/* Style de la barre de navigation */
+header {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+}
+
+header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Pacifico; /* Police spécifique */
+  margin: 0 2rem;
+}
+
+header div i {
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+header nav {
+  padding: 1rem 2rem;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+nav li a {
+  padding: 1rem;
+  margin: 1rem;
+  text-decoration: none;
+  color: white;
+  transition: all 250ms ease-in;
+}
+
+nav li a:hover {
+  background: rgba(255, 255, 255, 0.3); /* Fond semi-transparent au survol */
+  color: rgb(134, 233, 231);
+}
+
+/* Style de la section supérieure */
+.titles {
+  color: white;
+  text-align: center;
+  width: 50vw; /* Largeur égale à 50% de la largeur de la fenêtre */
+  margin: 0 auto; /* Centrer horizontalement */
+}
+
+.titles h1 {
+  font-family: Pacifico;
+  font-size: 5rem;
+  margin-bottom: 0;
+  text-shadow: 1px 1px 0 black;
+}
+
+.titles p {
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 0 black;
+}
+
+/* Section inférieure */
+.container-boxes {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  max-width: 80vw;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.box {
+  background: rgba(255, 255, 255, 0.5);
+  margin: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 350px;
+  max-height: 180px;
+  min-height: 180px;
+  transition: all 250ms ease-out;
+}
+
+.box:hover {
+  background: rgba(255, 255, 255, 0.7);
+  transform: translateY(-20%);
+}
+
+.box a {
+  text-decoration: none;
+  color: black;
+}
+
+.icon {
+  font-size: 3rem;
+  padding: 1rem;
+}
+
+.text h3 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 0;
+}
+
+.text p {
+  margin-top: 1rem;
+  line-height: 1.5rem;
+  text-align: left;
+}
+
+.text {
+  padding: 0.5rem;
+}
+
+/* Horaires */
+table {
+  border-collapse: collapse;
+  width: 50%; /* Largeur de 50% */
+  margin: 0 25% 0 25%; /* Marge égale à 25% des côtés */
+}
+
+th,
+td {
+  border: 1px solid;
+  padding: 10px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #a8bfbf;
+}
+
+tr:last-child {
+  border-bottom: 2px solid;
+}
+
+tr:first-child {
+  border-bottom: 2px solid;
+}
+
+/* Média-queries */
+
+/* Pour les écrans de taille moyenne */
+@media (max-width: 1160px) {
+  .icon {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+
+  .text h3 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 0;
+    font-size: 1rem;
+  }
+
+  .text p {
+    margin-top: 1rem;
+    line-height: 1.5rem;
+    text-align: left;
+    font-size: 0.8rem;
+  }
+
+  nav li a:hover {
+    background: none;
+    color: black;
+  }
+}
+
+/* Pour les petits écrans */
+@media (max-width: 850px) {
+  body {
+    height: 100%; /* Hauteur égale à 100% de la hauteur de la fenêtre */
+  }
+
+  .container-boxes {
+    flex-direction: column; /* Affichage en colonnes */
+  }
+
+  .box:hover {
+    background: rgba(255, 255, 255, 0.7);
+    transform: none;
+  }
+
+  .titles h1 {
+    font-size: 3rem; /* Taille de police réduite pour les petits écrans */
+  }
+}
+
+/* Section Contact */
+
+.contact-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+
+.contact-details {
+  width: 30%;
+  padding-left: 50px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  margin-left: 120px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.address {
+  width: 30%;
+  padding-left: 50px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  margin-right: 100px;
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.black-title {
+  color: rgb(77, 74, 74) !important;
+}
+
+.description {
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  color:black;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+/* Section pour contenir les cartes */
+.map-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+
+.map-container img {
+  flex: 1 1 45%; /* Ajuste la largeur à 45% pour permettre deux images côte à côte */
+  margin-left: 15px;
+  width: 45%; /* Assure que l'image prend toute la largeur du conteneur */
+  height: auto;
+  max-height: 300px; /* Limite la hauteur maximale pour les images */
+  border-radius: 10px;
+}
+
+
+img {
+  max-width: 50%;
+  height: auto;
+}
+
+@media (max-width: 850px) {
+  .titles h1 {
+    font-size: 3rem; /* Taille de police réduite pour les petits écrans */
+  }
+
+  .titles {
+    width: 90%; /* Augmente la largeur du paragraphe pour les petits écrans */
+  }
+
+  header {
+    flex-direction: column; /* Affichage en colonnes pour les petits écrans */
+    align-items: center; /* Centrer les éléments horizontalement */
+  }
+
+  header a {
+    margin: 10px; /* Espacement autour des liens du menu */
+  }
+
+  header a img {
+    width: 2rm; /* Taille du logo pour les petits écrans */
+  }
+
+
+  table {
+    margin: 0 auto; /* Centrer le tableau horizontalement */
+  }
+}
+
+@media (max-width: 1000px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  nav li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  nav ul li {
+    display: block !important; /* Assure que les éléments li sont affichés en bloc */
+  }
+
+  nav li a {
+    padding: 10px 20px;
+    margin-right: 0;
+  }
+}
+
+
+
+@media (max-width: 850px) {
+  .contact-info {
+    flex-direction: column; /* Empile les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+  }
+
+  .contact-details,
+  .address,
+  .map-container {
+    width: 90%; /* Réduit la largeur des éléments pour les petits écrans */
+    margin: 20px 0; /* Ajoute un espacement entre les éléments */
+  }
+
+  .map-container {
+    display: flex;
+    flex-direction: column; /* Empile les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+  }
+
+  .map-container img {
+    width: 100%; /* Ajuste la largeur de l'image pour remplir son conteneur */
+  }
+}
+
+@media (max-width: 850px) {
+  .map-container {
+    width: 100%; /* Utilise la pleine largeur disponible */
+    margin: 20px auto; /* Centrer le conteneur horizontalement et ajouter un espacement */
+    padding: 0; /* Supprime le remplissage du conteneur */
+    display: flex;
+    justify-content: space-between; /* Aligne les images côte à côte */
+  }
+
+  .map-container iframe {
+    width: 100%; /* Garantit que les images ne dépassent pas la taille du conteneur */
+    margin: 10px
+  }
+}
+
+/* Conteneur principal des documents */
+.document-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+/* Style pour chaque bloc de document */
+.document-item {
+  width: 45%;
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Aperçu du document */
+.document-image {
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 15px;
+}
+
+/* Bouton de téléchargement */
+.btn-download {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+  background-color: #555;
+}
+
+/* Alignement et marges */
+.document-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Pour les écrans plus petits (tablettes et téléphones) */
+@media (max-width: 768px) {
+  .document-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .document-item {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
